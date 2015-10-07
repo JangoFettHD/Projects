@@ -4,7 +4,7 @@ public class CopyOflol {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner (System.in);
-		int DNA = 0;
+		double DNA = 0;
 		String DNA1 = "";
 		
 		double max_procent=0;
