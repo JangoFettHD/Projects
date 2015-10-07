@@ -47,8 +47,7 @@ public class CopyOflol {
 			
 			
 		}
-		double proc = n*100/DNA;
-		double procent = proc;
+		double procent = n*100/DNA;
 		
 
 		if (procent>temp_procent){
