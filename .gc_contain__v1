@@ -4,14 +4,14 @@ public class CopyOflol {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner (System.in);
-		double DNA = 0;
-		String DNA1 = "";
+
 		
 		double max_procent=0;
 		String max_id="";
 		double temp_procent = 0;
 		while (true){
-			
+		double DNA = 0;
+		String DNA1 = "";
 		String id = input.nextLine();
 		char gc;
 		double n=0;
