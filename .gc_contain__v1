@@ -1,64 +1,46 @@
 import java.util.Scanner;
 
-public class CopyOflol {
+public class GCcontentv1 {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner (System.in);
-
-		
 		double max_procent=0;
 		String max_id="";
 		double temp_procent = 0;
-		while (true){
-		double DNA = 0;
-		String DNA1 = "";
-		String id = input.nextLine();
-		char gc;
-		double n=0;
-		if (id.equals("stop")){
-			System.out.println(max_id);
-			System.out.println(max_procent);
-			break;
-		}
 		
 		while (true){
-			 
-			
-			
-			DNA1 = input.nextLine();
-			for (int i=0; i<DNA1.length(); i++)
-			{
-				gc = DNA1.charAt(i);
-				if (gc == 'G' ||  gc == 'C'){
-					n++;
+			double DNA = 0;
+			String DNA1 = "";
+			String id = input.nextLine();
+			char gc;
+			double n=0;
+			if (id.equals("stop")){
+				System.out.println(max_id);
+				System.out.println(max_procent);
+				break;
+				}
+		
+			while (true){
+				DNA1 = input.nextLine();
+				for (int i=0; i<DNA1.length(); i++) {
+					gc = DNA1.charAt(i);
+					if (gc == 'G' ||  gc == 'C'){
+						n++;
+						}
+					}
+				char g = DNA1.charAt(0);
+				if (g=='>'){
+					break;
+					}
+				DNA=DNA+DNA1.length();	
+				}
+			double procent = n*100/DNA;
+			if (procent>temp_procent){
+				max_procent=procent;
+				temp_procent=procent;
+				max_id=id;
 				}
 			}
-			
-			char g = DNA1.charAt(0);
-			
-			if (g=='>'){
-				
-				break;
-			}
-			DNA=DNA+DNA1.length();
-			
-			
-			
-			
-			
-		}
-		double procent = n*100/DNA;
-		
-
-		if (procent>temp_procent){
-			max_procent=procent;
-			temp_procent=procent;
-			max_id=id;
-			
-		}
-		}
-		
-
 	}
 
 }
