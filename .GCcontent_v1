@@ -1,6 +1,8 @@
+package eigeigej;
+
 import java.util.Scanner;
 
-public class GCcontentv1 {
+public class GCcontent_v1 {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner (System.in);
@@ -34,7 +36,10 @@ public class GCcontentv1 {
 					}
 				DNA=DNA+DNA1.length();	
 				}
-			double procent = n*100/DNA;
+			double proc = n*100/DNA;
+			double procent = proc*1000000;
+			int hi = (int) Math.round(procent);
+			procent = (double) hi/1000000;
 			if (procent>temp_procent){
 				max_procent=procent;
 				temp_procent=procent;
