@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+public class GCcontent_v2 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner (System.in);
+		double max_procent=0;
+		String max_id="";
+		double temp_procent = 0;
+		double DNA = 0;
+		String id = "";
+		while (true){
+			String DNA1 = "";
+
+			char gc;
+			double n=0;
+
+			DNA1 = input.nextLine();
+			char g = DNA1.charAt(0);
+			if (g=='>'){
+				id=DNA1;
+				}
+			if (DNA1.equals("stop")){
+				System.out.println(max_id);
+				System.out.println(max_procent);
+				break;
+				}
+			
+			for (int i=0; i<DNA1.length(); i++) {
+				gc = DNA1.charAt(i);
+				if (gc == 'G' ||  gc == 'C'){
+					n++;
+					}
+
+				}
+			DNA=DNA+DNA1.length();
+			
+			double proc = n*100/DNA;
+			double procent = proc*1000000;
+			int hi = (int) Math.round(procent);
+			procent = (double) hi/1000000;
+			if (procent>temp_procent){
+				max_procent=procent;
+				temp_procent=procent;
+				max_id=id;
+				}
+			
+			}
+	}
+
+}
