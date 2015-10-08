@@ -1,0 +1,57 @@
+package eigeigej;
+import java.util.Scanner;
+public class PROTEINCHIK {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+        String RNA = sc.nextLine();
+        String PROT = "";
+        for (int i=1; i<(RNA.length()-1); i=i+3)
+        {
+            char g = RNA.charAt(i-1);
+            char g1 = RNA.charAt(i);
+            char g2 = RNA.charAt(i+1);
+            String Sg = ""+g+g1+g2;
+            //System.out.println(Sg);
+            if (g=='U' && g1=='U' && (g2=='U' || g2=='C'))
+            {
+                PROT=PROT+"F";
+            }
+            if (g=='U' && g1=='U' && (g2=='A' || g2=='G'))
+            {
+                PROT=PROT+"L";
+            }
+            if (g=='U' && g1=='C' && (g2=='U' || g2=='C' || g2=='A' || g2=='G'))
+            {
+                PROT=PROT+"S";
+            }
+            if (g=='U' && g1=='A' && (g2=='U' || g2=='C'))
+            {
+                PROT=PROT+"Y";
+            }
+            if (g=='U' && g1=='A' && (g2=='A' || g2=='G'))
+            {
+                break;
+            }
+            if (g=='U' && g1=='G' && (g2=='U' || g2=='C'))
+            {
+                PROT=PROT+"C";
+            }
+            if (g=='U' && g1=='G' && g2=='A')
+            {
+                break;
+            }
+            if (g=='U' && g1=='G' && g2=='g')
+            {
+                PROT=PROT+"W";
+            }
+            if (g=='C' && g1=='U' && (g2=='U' || g2=='C' || g2=='A' || g2=='G'))
+            {
+                PROT=PROT+"L";
+            }
+
+        }
+        System.out.println(PROT);
+	}
+
+}
