@@ -1,0 +1,25 @@
+package eigeigej;
+import java.util.Scanner;
+public class PROTEINCHIK {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+        String RNA = sc.nextLine();
+        String PROT = "";
+        for (int i=1; i<(RNA.length()-1); i=i+3)
+        {
+            char g = RNA.charAt(i-1);
+            char g1 = RNA.charAt(i);
+            char g2 = RNA.charAt(i+1);
+            String Sg = ""+g+g1+g2;
+            //System.out.println(Sg);
+            if (g=='U' && g1=='U' && g2=='U')
+            {
+                PROT=PROT+"F";
+            }
+
+        }
+        System.out.println(PROT);
+	}
+
+}
