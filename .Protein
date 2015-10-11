@@ -13,11 +13,106 @@ public class PROTEINCHIK {
             char g2 = RNA.charAt(i+1);
             String Sg = ""+g+g1+g2;
             //System.out.println(Sg);
-            if (g=='U' && g1=='U' && g2=='U')
+            if (g=='U' && g1=='U' && (g2=='U' || g2=='C'))
             {
                 PROT=PROT+"F";
             }
-
+            if (g=='U' && g1=='U' && (g2=='A' || g2=='G'))
+            {
+                PROT=PROT+"L";
+            }
+            if (g=='U' && g1=='C' && (g2=='U' || g2=='C' || g2=='A' || g2=='G'))
+            {
+                PROT=PROT+"S";
+            }
+            if (g=='U' && g1=='A' && (g2=='U' || g2=='C'))
+            {
+                PROT=PROT+"Y";
+            }
+            if (g=='U' && g1=='A' && (g2=='A' || g2=='G'))
+            {
+                break;
+            }
+            if (g=='U' && g1=='G' && (g2=='U' || g2=='C'))
+            {
+                PROT=PROT+"C";
+            }
+            if (g=='U' && g1=='G' && g2=='A')
+            {
+                break;
+            }
+            if (g=='U' && g1=='G' && g2=='G')
+            {
+                PROT=PROT+"W";
+            }
+            if (g=='C' && g1=='U' && (g2=='U' || g2=='C' || g2=='A' || g2=='G'))
+            {
+                PROT=PROT+"L";
+            }
+            if (g=='C' && g1=='C' && (g2=='U' || g2=='C' || g2=='A' || g2=='G'))
+            {
+                PROT=PROT+"P";
+            }
+            if (g=='C' && g1=='A' && (g2=='U' || g2=='C'))
+            {
+                PROT=PROT+"H";
+            }
+            if (g=='C' && g1=='A' && (g2=='A' || g2=='G'))
+            {
+                PROT=PROT+"Q";
+            }
+            if (g=='C' && g1=='G' && (g2=='U' || g2=='C' || g2=='A' || g2=='G'))
+            {
+                PROT=PROT+"R";
+            }
+            if (g=='A' && g1=='U' && (g2=='U' || g2=='C' || g2=='A'))
+            {
+                PROT=PROT+"I";
+            }
+            if (g=='A' && g1=='U' && g2=='G')
+            {
+                PROT=PROT+"M";
+            }
+            if (g=='A' && g1=='C' && (g2=='U' || g2=='C' || g2=='A' || g2=='G'))
+            {
+                PROT=PROT+"T";
+            }
+            if (g=='A' && g1=='A' && (g2=='U' || g2=='C'))
+            {
+                PROT=PROT+"N";
+            }
+            if (g=='A' && g1=='A' && (g2=='A' || g2=='G'))
+            {
+                PROT=PROT+"K";
+            }
+            if (g=='A' && g1=='G' && (g2=='U' || g2=='C'))
+            {
+                PROT=PROT+"S";
+            }
+            if (g=='A' && g1=='G' && (g2=='A' || g2=='G'))
+            {
+                PROT=PROT+"R";
+            }
+            if (g=='G' && g1=='U' && (g2=='U' || g2=='C' || g2=='A' || g2=='G'))
+            {
+                PROT=PROT+"V";
+            }
+            if (g=='G' && g1=='C' && (g2=='U' || g2=='C' || g2=='A' || g2=='G'))
+            {
+                PROT=PROT+"A";
+            }
+            if (g=='G' && g1=='A' && (g2=='U' || g2=='C'))
+            {
+                PROT=PROT+"D";
+            }
+            if (g=='G' && g1=='A' && (g2=='A' || g2=='G'))
+            {
+                PROT=PROT+"E";
+            }
+            if (g=='G' && g1=='G' && (g2=='U' || g2=='C' || g2=='A' || g2=='G'))
+            {
+                PROT=PROT+"G";
+            }
         }
         System.out.println(PROT);
 	}
