@@ -1,0 +1,21 @@
+package eigeigej;
+
+import java.util.Scanner;
+
+public class motiFF {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		String s = input.next();
+		String t = input.next();
+		int LenghtDNA = s.length();
+		int LenghtMotif = t.length();
+		for (int i=0; i<LenghtDNA-LenghtMotif; i++){
+			String subStr = s.substring(i, i+LenghtMotif);
+			if (subStr.equals(t)){
+				System.out.print((i+1)+" ");
+			}
+		}
+		
+	}
+}
